@@ -1,5 +1,5 @@
 # user-data 템플릿 코드를 외부에 노출
 
-output "miniconda_userdata" {
+output "nginx_userdata" {
   value = data.template_file.nginx_userdata.rendered
 }
