@@ -53,8 +53,6 @@ resource "aws_security_group" "private_sg" {
   name = "${var.instance_name}_private_sg_${each.key}"
   vpc_id = var.vpc_id
 
-  # ingress 추가 필요!
-
  dynamic "ingress" {
    for_each = each.value.ingress_port
    content {
